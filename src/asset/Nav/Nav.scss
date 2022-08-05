@@ -1,0 +1,17 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: aquamarine;
+
+    ul li{
+        display: inline-block;
+        margin-right: 25px;
+        
+    }
+
+    NavLink{
+        text-decoration: none;
+    }
+}

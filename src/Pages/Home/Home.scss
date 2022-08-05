@@ -1,0 +1,13 @@
+.book-cont{
+    display: flex;
+    overflow-x: scroll;
+
+    .book-item{
+        border: 2px solid red;
+        margin: 5px;
+    }
+    span{
+        margin: 0 5px;
+    }
+}
+

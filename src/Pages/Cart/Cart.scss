@@ -1,0 +1,9 @@
+.cart-cont{
+    display: flex;
+    flex-wrap: wrap;
+
+    .cart-item{
+        border: 2px solid red;
+        margin: 5px;
+    }
+}

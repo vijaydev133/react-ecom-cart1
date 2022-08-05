@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import {Routes,Route} from "react-router-dom"
+import Home from "./Pages/Home/Home"
+import Favourite from "./Pages/Favourite/Favourite"
+import Cart from "./Pages/Cart/Cart"
+import Login from "./Pages/Login/Login"
+import { stateContext } from './Context/Context';
+import {useReducer} from "react"
+import {reducerFunct, initialState} from "./Context/reducer"
+
 
 function App() {
+
+  const [state,dispatch] = useReducer(reducerFunct,initialState)
+
   return (
+    // <stateContext.Provider value={{state,dispatch}}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path='/' element= {<Login/>}></Route>
+        <Route path='home' element={<Home/>}></Route>
+        <Route path='cart' element={<Cart/>}></Route>
+        <Route path='favourite' element={<Favourite/>}></Route>
+      </Routes>
     </div>
+    // </stateContext.Provider>
   );
 }
 
